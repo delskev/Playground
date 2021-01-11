@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static com.google.common.flogger.LazyArgs.lazy;
 import static org.awaitility.Awaitility.await;
 
-class FloggerGettingStarted {
+class FloggerGettingStartedTest {
     private static final FluentLogger logger = FluentLogger.forEnclosingClass();
     //put arg: -Djava.util.logging.config.file=./src/test/resources/logging.properties
 
