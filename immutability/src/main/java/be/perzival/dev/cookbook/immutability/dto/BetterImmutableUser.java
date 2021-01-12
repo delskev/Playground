@@ -61,7 +61,7 @@ public class BetterImmutableUser implements User {
 
     @Override
     public String toString() {
-        return "MutableUser{" +
+        return "BetterImmutableUser{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", luckyNumberList=" + luckyNumberList +

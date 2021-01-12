@@ -44,7 +44,7 @@ public class PoorImmutableUser implements User {
 
     @Override
     public String toString() {
-        return "MutableUser{" +
+        return "PoorImmutableUser{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", luckyNumberList=" + luckyNumberList +

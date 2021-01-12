@@ -66,7 +66,7 @@ public class ImmutableUserWithBuilder implements User {
 
     @Override
     public String toString() {
-        return "MutableUser{" +
+        return "ImmutableUserWithBuilder{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", luckyNumberList=" + luckyNumberList +
