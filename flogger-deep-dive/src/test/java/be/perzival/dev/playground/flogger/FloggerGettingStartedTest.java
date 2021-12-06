@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -16,6 +17,17 @@ class FloggerGettingStartedTest {
     private static final FluentLogger logger = FluentLogger.forEnclosingClass();
     //put arg: -Djava.util.logging.config.file=./src/test/resources/logging.properties
 
+    public enum AvailableDatabase {
+        CDB, QCDB;
+
+        public static AvailableDatabase fromString(String name) {
+            final int index;
+            if( (index = Arrays.asList(AvailableDatabase.values()).indexOf(name)) == -1) {
+                new IllegalArgumentException(String.format("No such database is available %s", name));
+            }
+            return AvailableDatabase.valueOf(name);
+        }
+    }
 
     //The system backend uses JDK logger,
     //so just set the log level of the equivalently named JDK logger or parent logger.
